@@ -1,0 +1,65 @@
+﻿@model CRUD.Domain.Domain.Pessoa
+
+<div class="container margin-top-40">
+
+
+    @if (TempData["MensagemErro"] != null)
+    {
+        <div class="row">
+            <div class="alert alert-danger">
+                @TempData["MensagemErro"]
+            </div>
+        </div>
+    }
+    <form method="post" class="row">
+        @Html.HiddenFor(p=>p.Id)
+        <div class="col-md-3">
+            <label>
+                Nome completo
+            </label>
+            <input value="@Model.Nome" name="nome" class="form-control" type="text" />
+        </div>
+        <div class="col-md-3">
+            <label>
+                Data de Nascimento
+            </label>
+            <input value="@(Model.Id != Guid.Empty ? Model.DataNascimento.Date.ToString("yyyy-MM-dd") : null)" name="dataNascimento" type="date" class="form-control" />
+        </div>
+        <div class="col-md-3">
+            <label>
+                Valor da renda
+            </label>
+            <input value="@Model.ValorRenda" name="valorRenda" id="valorRenda" type="text" class="form-control" />
+        </div>
+        <div class="col-md-3">
+            <label>
+                CPF
+            </label>
+            <input id="cpf" value="@Model.CPF" min="11" max="11" maxlength="11" name="CPF" type="text" class="form-control cpf-input" />
+        </div>
+        <div class="col-md-6 offset-6 margin-top-20 text-end">
+            <button type="submit" class="btn-jpv btn ">
+                Cadastrar
+            </button>
+            <a href="@Url.Action("Index")" class="btn btn-danger">
+                Voltar
+            </a>
+        </div>
+    </form>
+</div>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#valorRenda").keyup(function () {
+                var valor = $(this).val();
+                console.log("aqui", $(this))
+
+                var valor = valor.replace(',', '.');
+                valor = valor.replace(/[^\d.]/g, '');
+                $(this).val(valor);
+            });
+
+            $("#cpf").mask("000.000.000-00");
+        })
+    </script>
+}

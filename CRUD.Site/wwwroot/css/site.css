@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background: #F2F3F4;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    background: #FFB902
+}
+
+footer {
+    background: #FFB902
+}
+
+.logo-texto {
+    width: 200px;
+    height: 80px;
+}
+
+.logo-img {
+    height: 80px;
+    width: 100px;
+}
+
+label {
+    font-weight: bold;
+    margin: 10px 0 10px 0;
+}
+
+.btn-jpv {
+    background: #FFB309
+}
+
+.margin-inputs {
+    margin: 0px 10px 0px 10px;
+}
+
+.margin-top-20 {
+    margin-top: 20px
+}
+
+.margin-top-40 {
+    margin-top: 40px;
+}
+
+.bg {
+    background: #FFF;
+    border-radius: 10px;
+}
+
+.btn {
+    border: 1px solid;
+}
+
+.color-jpv {
+    color: #FFB309;
+}
+
+.color-jpv:hover {
+    color:#000;
+}
+footer a {
+    color: #000 !important;
+    text-decoration: none;
+    transition: transform 0.5s;
+}
+
+    footer a:hover {
+        transition: transform 0.5s ;
+        transform: translateY(-2px);
+    }
+
+@media (max-width: 768px) {
+    .table-container {
+        overflow-x: auto;
+    }
+
+        .table-container table {
+            width: 100%;
+            white-space: nowrap;
+        }
+
+        .table-container th,
+        .table-container td {
+            padding: 10px;
+        }
+
+        .offset-4{
+            margin-left:0 !important;
+        }
+        .offset-6{
+            margin-left:0 !important;
+        }
+
+}

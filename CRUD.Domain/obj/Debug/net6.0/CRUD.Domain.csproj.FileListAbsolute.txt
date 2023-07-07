@@ -1,0 +1,14 @@
+C:\Users\lhgir\source\repos\APICrud\CRUD.Domain\bin\Debug\net6.0\CRUD.Domain.deps.json
+C:\Users\lhgir\source\repos\APICrud\CRUD.Domain\bin\Debug\net6.0\CRUD.Domain.runtimeconfig.json
+C:\Users\lhgir\source\repos\APICrud\CRUD.Domain\bin\Debug\net6.0\CRUD.Domain.dll
+C:\Users\lhgir\source\repos\APICrud\CRUD.Domain\bin\Debug\net6.0\CRUD.Domain.pdb
+C:\Users\lhgir\source\repos\APICrud\CRUD.Domain\obj\Debug\net6.0\CRUD.Domain.csproj.AssemblyReference.cache
+C:\Users\lhgir\source\repos\APICrud\CRUD.Domain\obj\Debug\net6.0\CRUD.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lhgir\source\repos\APICrud\CRUD.Domain\obj\Debug\net6.0\CRUD.Domain.AssemblyInfoInputs.cache
+C:\Users\lhgir\source\repos\APICrud\CRUD.Domain\obj\Debug\net6.0\CRUD.Domain.AssemblyInfo.cs
+C:\Users\lhgir\source\repos\APICrud\CRUD.Domain\obj\Debug\net6.0\CRUD.Domain.csproj.CoreCompileInputs.cache
+C:\Users\lhgir\source\repos\APICrud\CRUD.Domain\obj\Debug\net6.0\CRUD.Domain.dll
+C:\Users\lhgir\source\repos\APICrud\CRUD.Domain\obj\Debug\net6.0\refint\CRUD.Domain.dll
+C:\Users\lhgir\source\repos\APICrud\CRUD.Domain\obj\Debug\net6.0\CRUD.Domain.pdb
+C:\Users\lhgir\source\repos\APICrud\CRUD.Domain\obj\Debug\net6.0\CRUD.Domain.genruntimeconfig.cache
+C:\Users\lhgir\source\repos\APICrud\CRUD.Domain\obj\Debug\net6.0\ref\CRUD.Domain.dll

@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUD.API", "APICrud\CRUD.API.csproj", "{19F5DCAF-CA48-49E2-973A-65471F8EDADB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUD.Domain", "CRUD.Domain\CRUD.Domain.csproj", "{42F60679-4B04-43C8-8CB2-01EA6E33E03D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUD.Site", "CRUD.Site\CRUD.Site.csproj", "{7C1838ED-C7A9-4707-9B17-775800319F33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19F5DCAF-CA48-49E2-973A-65471F8EDADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19F5DCAF-CA48-49E2-973A-65471F8EDADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19F5DCAF-CA48-49E2-973A-65471F8EDADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19F5DCAF-CA48-49E2-973A-65471F8EDADB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42F60679-4B04-43C8-8CB2-01EA6E33E03D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42F60679-4B04-43C8-8CB2-01EA6E33E03D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42F60679-4B04-43C8-8CB2-01EA6E33E03D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42F60679-4B04-43C8-8CB2-01EA6E33E03D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C1838ED-C7A9-4707-9B17-775800319F33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C1838ED-C7A9-4707-9B17-775800319F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C1838ED-C7A9-4707-9B17-775800319F33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C1838ED-C7A9-4707-9B17-775800319F33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10324CBA-3EDD-40EE-9170-8A7AE1207BFC}
+	EndGlobalSection
+EndGlobal

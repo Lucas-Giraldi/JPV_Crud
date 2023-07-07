@@ -1,0 +1,100 @@
+﻿@model List<CRUD.Domain.Domain.Pessoa>
+@{
+    ViewData["Title"] = "CRUD";
+}
+
+
+<div class="container margin-top-20">
+
+    @if (TempData["MensagemSucess"] != null)
+    {
+        <div class="row">
+            <div class="alert alert-success">
+                @TempData["MensagemSucess"]
+            </div>
+        </div>
+    }
+
+    @if (TempData["MensagemErro"] != null)
+    {
+        <div class="row">
+            <div class="alert alert-danger">
+                @TempData["MensagemErro"]
+            </div>
+        </div>
+    }
+
+
+    <div class="row align-items-end">
+        <div class="col-md-3">
+            <a href="@Url.Action("CadastrarEditar")" class="btn btn-jpv"> Cadastrar</a>
+        </div>
+
+        <div class="col-md-9 ">
+            <form class="filtros d-flex justify-content-end">
+                <div class="col-md-3 margin-inputs">
+                    <label>Nome</label>
+                    <input oninput="filtrarTabela(1)" class="form-control" placeholder="Filtro..." id="1" />
+                </div>
+
+                <div class="col-md-3 margin-inputs ">
+                    <label>CPF</label>
+                    <input oninput="filtrarTabela(4)" class="form-control" placeholder="Filtro..." id="4" />
+                </div>
+
+                <div class="col-md-3 margin-inputs">
+                    <label>Id</label>
+                    <input oninput="filtrarTabela(0)" class="form-control" placeholder="Filtro..." id="0" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row table-container">
+        <table class="table mt-5 bg" id="lista-pessoas">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Data de nascimento</th>
+                    <th scope="col">Valor de renda</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Excluir</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var pessoa in Model)
+                {
+                    <tr>
+                        <td>@pessoa.Id</td>
+                        <td>@pessoa.Nome</td>
+                        <td>@pessoa.DataNascimento.ToString("dd/MM/yyyy")</td>
+                        <td>@pessoa.ValorRenda.ToString("c")</td>
+                        <td>@Convert.ToInt64(pessoa.CPF).ToString(@"000\.000\.000\-00")</td>
+                        <td><a class="color-jpv" href="@Url.Action("CadastrarEditar", new { id = pessoa.Id })"><i class="fas fa-edit"></i></a></td>
+                        <td><a href="@Url.Action("Deletar", new {id = pessoa.Id})"><i class="fas fa-trash" style="color: #e83211;"></i></a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+@section Scripts{
+
+    <script>
+
+        $("#4").mask("000.000.000-00");
+        function filtrarTabela(tipoCampo) {
+            var filtro = $("#" + tipoCampo).val().toLowerCase();
+                $("#lista-pessoas tbody tr").each(function () {
+                    var valorCampo = $(this).find("td:eq(" + tipoCampo + ")").text().toLowerCase();
+                    if (valorCampo.includes(filtro)) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+        }
+    </script>
+}
