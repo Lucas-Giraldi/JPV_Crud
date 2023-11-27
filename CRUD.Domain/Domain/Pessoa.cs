@@ -1,6 +1,7 @@
 ﻿
 namespace CRUD.Domain.Domain
 {
+    //Classe pessoa para rodar Migration e adicionar ela no banco de dados
     public class Pessoa
     {
         public Guid Id { get; set; }

@@ -10,7 +10,7 @@ namespace APICrud.Controllers
     [ApiController]
     public class PessoaController : ControllerBase
     {
-
+        //API de pesso
         private readonly ServerContext _serverContext;
 
         public PessoaController(ServerContext serverContext)
@@ -18,6 +18,7 @@ namespace APICrud.Controllers
             _serverContext = serverContext;
         }
 
+        //Endpoint de listar objetos do banco de dados da tabela Pessoa utilizando o Entity
         [HttpGet]
         [Route("Listar")]
         public async Task<List<Pessoa>> Listar()
@@ -28,7 +29,7 @@ namespace APICrud.Controllers
 
             return lista;
         }
-
+        //Endpoint para Cadastrar uma pessoa, dados recebidos pelo body da requisição
         [HttpPost("Cadastrar")]
         public async Task<IActionResult> Cadastrar([FromBody] Pessoa pessoa)
         {
@@ -43,7 +44,7 @@ namespace APICrud.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
-
+        //Endpoint para obter um objeto pessoa caso seja encontrado, dados recebidos pela rota
         [HttpGet]
         [Route("Obter/{id}")]
         public async Task<Pessoa> Obter([FromRoute] Guid id)
@@ -54,7 +55,7 @@ namespace APICrud.Controllers
             return pessoa;
 
         }
-
+        //Endpoint para editar um objeto pessoa referente ao Id recebido, dados recebidos pelo body da requisição
         [HttpPost]
         [Route("Editar")]
         public async Task<IActionResult> Editar([FromBody] Pessoa pessoa)
@@ -70,7 +71,7 @@ namespace APICrud.Controllers
             return Ok();
         }
 
-
+        //Endpoint para deletar um objeto pessoa referente ao ID enviado pelo body da requisição
         [HttpPost]
         [Route("Deletar")]
         public async Task<IActionResult> Deletar([FromBody] Guid id)

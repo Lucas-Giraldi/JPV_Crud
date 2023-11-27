@@ -3,7 +3,7 @@
     ViewData["Title"] = "CRUD";
 }
 
-
+@* HTML da pagina *@
 <div class="container margin-top-20">
 
     @if (TempData["MensagemSucess"] != null)
@@ -63,7 +63,7 @@
                 </tr>
             </thead>
             <tbody>
-
+                @* Exibindo dados enviados da Controller *@
                 @foreach (var pessoa in Model)
                 {
                     <tr>
@@ -83,7 +83,7 @@
 @section Scripts{
 
     <script>
-
+        // Filtrando dados, mascaras e regras para o sistema
         $("#4").mask("000.000.000-00");
         function filtrarTabela(tipoCampo) {
             var filtro = $("#" + tipoCampo).val().toLowerCase();

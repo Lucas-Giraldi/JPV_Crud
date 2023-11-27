@@ -15,7 +15,7 @@ namespace CRUD.Site.Controllers
         private string URLAPI = "";
 
 
-
+        //Construtor da Controller
         public HomeController(ILogger<HomeController> logger)
         {
             URLAPI = "https://localhost:2985/api/Pessoa";
@@ -24,6 +24,7 @@ namespace CRUD.Site.Controllers
             _logger = logger;
         }
 
+        //Método para retornar a página com os itens retornados pela API
         public async Task<IActionResult> Index()
         {
             var response = await _httpClient.GetAsync(URLAPI + "/Listar");
@@ -39,6 +40,7 @@ namespace CRUD.Site.Controllers
             return View();
         }
 
+        //Método para obter um objeto pessoa caso a API encontre
 
         public async Task<IActionResult> CadastrarEditar(Guid? id)
         {
@@ -66,7 +68,7 @@ namespace CRUD.Site.Controllers
             }
 
         }
-
+        //Método para cadastrar ou editar um objeto pessoa enviando os dados para a API
         [HttpPost]
         public async Task<IActionResult> CadastrarEditar(Guid id, string nome, DateTime dataNascimento, decimal valorRenda, string CPF)
         {
@@ -111,7 +113,7 @@ namespace CRUD.Site.Controllers
             }
 
         }
-
+        //método para deletar um objeto pessoa
         [HttpGet]
         public async Task<IActionResult> Deletar(Guid id)
         {

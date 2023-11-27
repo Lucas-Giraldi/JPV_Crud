@@ -2,7 +2,7 @@
 
 <div class="container margin-top-40">
 
-
+    @* HTML da pagina *@
     @if (TempData["MensagemErro"] != null)
     {
         <div class="row">
@@ -49,6 +49,8 @@
 </div>
 @section Scripts {
     <script>
+
+        //trocando , por . no campo valor e dizendo que ele só pode receber number, criando mascara
         $(document).ready(function () {
             $("#valorRenda").keyup(function () {
                 var valor = $(this).val();

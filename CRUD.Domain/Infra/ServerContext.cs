@@ -10,6 +10,8 @@ namespace CRUD.Domain.Infra
 {
     public class ServerContext : DbContext
     {
+
+        //Configuração do meu contexto e regras da tabela. Criação do objeto Pessoa para acessar direto do meu contexto
         public ServerContext(DbContextOptions<ServerContext> options) : base(options)
         {
         }

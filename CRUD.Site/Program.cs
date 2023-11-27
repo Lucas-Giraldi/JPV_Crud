@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+//configurando stringConnection do banco
 builder.Services.AddDbContext<ServerContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("SiteConnection"));
